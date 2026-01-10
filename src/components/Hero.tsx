@@ -97,7 +97,7 @@ const Hero = () => {
                                 <span className="text-xs tracking-[0.2em] text-stone-500 group-hover:text-white transition-colors uppercase">X (Twitter)</span>
                             </a>
 
-                            <a href="#" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
+                            <a href="https://pump.fun/coin/B1kzsd7BU5G5etUbCsFR2UNJQ83c143UvLKNGXzjpump" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
                                 <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-electric/50 transition-colors duration-300">
                                     {/* Force white icon using filter */}
                                     <img src={dexIcon} alt="PumpFun" className="w-3 h-3 object-contain opacity-50 group-hover:opacity-100 filter brightness-0 invert transition-all" />
