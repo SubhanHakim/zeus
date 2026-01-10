@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -29,7 +29,7 @@ const Gallery = () => {
             // Staggered Fade Up for all items
             const items = gsap.utils.toArray('.gallery-item');
 
-            items.forEach((item: any, i) => {
+            items.forEach((item: any) => {
                 gsap.fromTo(item,
                     { y: 100, opacity: 0 },
                     {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const logs = [
@@ -96,8 +96,8 @@ const Backrooms = () => {
                             key={log.id}
                             onClick={() => setActiveLog(log)}
                             className={`w-full text-left p-4 rounded border transition-all duration-300 group ${activeLog.id === log.id
-                                    ? 'bg-stone-900 border-stone-700 text-white'
-                                    : 'bg-transparent border-stone-900/50 hover:bg-stone-900/30 hover:border-stone-800'
+                                ? 'bg-stone-900 border-stone-700 text-white'
+                                : 'bg-transparent border-stone-900/50 hover:bg-stone-900/30 hover:border-stone-800'
                                 }`}
                         >
                             <div className="flex items-center justify-between mb-2">

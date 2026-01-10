@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import zeusImg from '../assets/zeus-hero.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
