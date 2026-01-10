@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import zeusImg from '../assets/zeus-hero.png';
+import dexIcon from '../assets/dexscreener.svg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import gsap from 'gsap';
 
@@ -84,6 +85,26 @@ const Hero = () => {
                             <br />Structure over chaos.
                             <br />Light over noise.
                         </p>
+
+                        {/* Social Links */}
+                        <div className="flex gap-8 mt-8 items-center pl-6 pointer-events-auto">
+                            <a href="https://x.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
+                                <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-electric/50 transition-colors duration-300">
+                                    <svg className="w-3 h-3 text-stone-400 group-hover:text-white fill-current transition-colors" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                                    </svg>
+                                </div>
+                                <span className="text-xs tracking-[0.2em] text-stone-500 group-hover:text-white transition-colors uppercase">X (Twitter)</span>
+                            </a>
+
+                            <a href="#" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
+                                <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-electric/50 transition-colors duration-300">
+                                    {/* Force white icon using filter */}
+                                    <img src={dexIcon} alt="PumpFun" className="w-3 h-3 object-contain opacity-50 group-hover:opacity-100 filter brightness-0 invert transition-all" />
+                                </div>
+                                <span className="text-xs tracking-[0.2em] text-stone-500 group-hover:text-white transition-colors uppercase">PumpFun</span>
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
 
