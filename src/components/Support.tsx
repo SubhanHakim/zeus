@@ -2,42 +2,42 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import truthImg from '../assets/supportes/truth.webp';
 import geniusImg from '../assets/supportes/genius.webp';
 import andyImg from '../assets/supportes/andy.webp';
 import gnonImg from '../assets/supportes/gnon.webp';
-import lowkeyImg from '../assets/supportes/image.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const supporters = [
     {
         id: 1,
+        name: 'w̸͕͂͂a̷͔̗͐t̴̙͗e̵̬̔̕r̴̰̓̊m̵͙͖̓̽a̵̢̗̓͒r̸̲̽ķ̷͔́͝',
+        handle: '@anthrupad',
+        image: truthImg,
+        link: 'https://x.com/anthrupad'
+    },
+    {
+        id: 2,
         name: 'j⧉nus',
         handle: '@j⧉nus',
         image: geniusImg,
         link: 'https://x.com/repligate'
     },
     {
-        id: 2,
+        id: 3,
         name: 'Andy Ayrey',
         handle: '@AndyAyrey',
         image: andyImg,
         link: 'https://x.com/andyayrey'
     },
     {
-        id: 3,
+        id: 4,
         name: 'Gnon',
         handle: '@Gnon',
         image: gnonImg,
         link: 'https://x.com/GnonLabs'
-    },
-    {
-        id: 4,
-        name: 'Lowkey',
-        handle: '@Kimchi662',
-        image: lowkeyImg,
-        link: 'https://x.com/Truth'
-    },
+    }
 ];
 
 const Support = () => {
@@ -80,7 +80,7 @@ const Support = () => {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[90rem] mx-auto">
                 {supporters.map((sup) => (
                     <a
                         key={sup.id}

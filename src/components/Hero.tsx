@@ -45,18 +45,18 @@ const Hero = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative h-screen max-h-screen w-full overflow-hidden bg-void">
+        <section ref={containerRef} className="relative h-[100dvh] w-full overflow-hidden bg-void">
 
             {/* Cinematic Background Grain/Noise */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
                 <div className="w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"></div>
             </div>
 
-            {/* Main Content Grid - Adjusted for vertical safety */}
-            <div className="container mx-auto px-8 md:px-16 lg:px-24 h-full relative z-10 grid grid-cols-12 content-center pb-20">
+            {/* Main Content Grid */}
+            <div className="container mx-auto px-6 md:px-16 lg:px-24 h-full relative z-10 grid grid-cols-1 md:grid-cols-12 content-center items-center md:pb-20">
 
-                {/* Typography Area */}
-                <div className="col-span-12 lg:col-span-8 flex flex-col justify-center relative z-20 mix-blend-difference text-stone-200 mt-16 lg:mt-24">
+                {/* Typography Area - Mobile: Top / Desktop: Left */}
+                <div className="md:col-span-8 flex flex-col justify-center relative z-20 mix-blend-difference text-stone-200 mt-0 md:mt-24">
 
                     {/* Architectural Eyebrow Text */}
                     <div ref={subTextRef} className="flex items-center gap-4 mb-4 md:mb-6 opacity-0">
@@ -64,8 +64,8 @@ const Hero = () => {
                         <span className="font-body text-[10px] md:text-xs tracking-[0.4em] uppercase text-stone-400">The Ascendant Series</span>
                     </div>
 
-                    {/* Masked Title Animation - Reduced sizes significantly */}
-                    <h1 ref={textRef} className="font-display font-bold text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] leading-[0.9] tracking-tighter text-white/90 overflow-hidden flex flex-col">
+                    {/* Masked Title Animation */}
+                    <h1 ref={textRef} className="font-display font-bold text-[13vw] md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] leading-[0.9] tracking-tighter text-white/90 overflow-hidden flex flex-col">
                         <span className="inline-block origin-bottom-left">GOD</span>
                         <span className="inline-block origin-bottom-left text-stone-500">OF</span>
                         <span className="inline-block origin-bottom-left text-transparent bg-clip-text bg-gradient-to-r from-white via-stone-200 to-stone-500">THUNDER</span>
@@ -90,7 +90,7 @@ const Hero = () => {
                 {/* Monumental Figure */}
                 <motion.div
                     style={{ y: y1 }}
-                    className="absolute top-0 right-0 w-[60vw] md:w-[50vw] h-full z-0 flex items-end justify-end pointer-events-none"
+                    className="absolute bottom-0 md:top-0 right-0 w-full md:w-[50vw] h-[60vh] md:h-full z-0 flex items-end justify-center md:items-end md:justify-end pointer-events-none"
                 >
                     <img
                         ref={imageRef}

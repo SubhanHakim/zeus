@@ -55,23 +55,23 @@ const About = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} id="philosophy" className="relative w-full bg-void text-stone-200 py-32 overflow-hidden">
+        <section ref={sectionRef} id="philosophy" className="relative w-full bg-void text-stone-200 py-20 md:py-32 overflow-hidden">
 
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-soft-light">
                 <div className="w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat"></div>
             </div>
 
-            <div className="container mx-auto px-8 md:px-16 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
                 {/* Visual Side - Sticky/Parallax Wrapper */}
-                <div className="relative h-[50vh] lg:h-auto lg:min-h-[60vh] w-full overflow-hidden rounded-sm border border-white/5 order-2 lg:order-1 aspect-[4/5]">
+                <div className="relative w-full aspect-[3/4] md:aspect-[4/5] lg:h-auto lg:min-h-[60vh] overflow-hidden rounded-sm border border-white/5 order-2 lg:order-1">
                     {/* Removed darkening overlay for clarity */}
                     <img
                         ref={imageRef}
                         src={aboutImg}
                         alt="Zeus Portrait"
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-top filter contrast-125 saturate-0"
                     />
 
                     {/* Floating Caption/Data */}
@@ -83,15 +83,15 @@ const About = () => {
                 </div>
 
                 {/* Content Side */}
-                <div ref={textRef} className="flex flex-col gap-12 order-1 lg:order-2 relative z-10">
+                <div ref={textRef} className="flex flex-col gap-8 md:gap-12 order-1 lg:order-2 relative z-10">
 
                     {/* Section Header */}
                     <div className="flex flex-col gap-4">
                         <div className="reveal-text flex items-center gap-4">
                             <span className="text-electric text-xs tracking-[0.4em]">PHILOSOPHY</span>
-                            <div className="h-[1px] w-24 bg-gradient-to-r from-electric to-transparent"></div>
+                            <div className="h-[1px] w-16 md:w-24 bg-gradient-to-r from-electric to-transparent"></div>
                         </div>
-                        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-white">
+                        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] text-white">
                             <div className="overflow-hidden"><span className="reveal-text block">ORDER</span></div>
                             <div className="overflow-hidden"><span className="reveal-text block text-stone-500">FROM</span></div>
                             <div className="overflow-hidden"><span className="reveal-text block">CHAOS</span></div>
@@ -99,12 +99,12 @@ const About = () => {
                     </div>
 
                     {/* Description */}
-                    <div className="space-y-8 max-w-lg">
-                        <p className="reveal-text font-body text-lg md:text-xl font-light text-stone-300 leading-relaxed">
+                    <div className="space-y-6 md:space-y-8 max-w-lg">
+                        <p className="reveal-text font-body text-base md:text-xl font-light text-stone-300 leading-relaxed">
                             Before the silence, there was noise. Before the form, there was the void.
                             The Ascendant Series is not merely sculpture; it is the crystallization of divine will.
                         </p>
-                        <p className="reveal-text font-body text-base text-stone-400 font-light leading-relaxed">
+                        <p className="reveal-text font-body text-sm md:text-base text-stone-400 font-light leading-relaxed">
                             We reinterpret the classical through the lens of the absolute. No excess. No decoration.
                             Only the raw, structural integrity of power frozen in time.
                         </p>
@@ -123,7 +123,7 @@ const About = () => {
             </div>
 
             {/* Ornamental Vertical Line */}
-            <div className="absolute top-0 bottom-0 left-12 w-[1px] bg-white/5 hidden xl:block"></div>
+            <div className="absolute top-0 bottom-0 left-6 md:left-12 w-[1px] bg-white/5 hidden xl:block"></div>
 
         </section>
     );
