@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import truthImg from '../assets/supportes/truth.webp';
 import geniusImg from '../assets/supportes/genius.webp';
 import andyImg from '../assets/supportes/andy.webp';
 import gnonImg from '../assets/supportes/gnon.webp';
